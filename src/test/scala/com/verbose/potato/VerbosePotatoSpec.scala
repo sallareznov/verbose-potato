@@ -1,14 +1,16 @@
 package com.verbose.potato
 
+import com.verbose.potato.VerbosePotato._
 import eu.timepit.refined.auto._
-import org.scalatest.flatspec.AnyFlatSpecLike
+import eu.timepit.refined.types.numeric.PosInt
 import org.scalatest.funsuite.AnyFunSuiteLike
+import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks._
 import org.scalatest.prop.TableFor2
 
-final class VerbosePotatoSpec extends AnyFunSuiteLike {
+final class VerbosePotatoSpec extends AnyFunSuiteLike with Matchers {
 
-  val table: TableFor2[Int, String] =
+  val table: TableFor2[PosInt, String] =
     Table(
       ("number", "suffix"),
       (1, "1st"),
@@ -24,7 +26,7 @@ final class VerbosePotatoSpec extends AnyFunSuiteLike {
     )
 
   test("ordinal indicator suffix") {
-    forAll(table)((number, suffix) => ordinalIndicatorSuffix(number) == suffix)
+    forAll(table)((number, suffix) => ordinalIndicatorSuffix(number) shouldBe suffix)
   }
 
 }
