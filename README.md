@@ -1,5 +1,7 @@
 ![CI](https://github.com/sallareznov/verbose-potato/actions/workflows/scala.yml/badge.svg)
 
+[Workflows](https://github.com/sallareznov/verbose-potato/actions)
+
 # verbose-potato
 
 # What?
