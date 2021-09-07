@@ -10,7 +10,7 @@ Playground project with small Scala exercises
 | ------ | ------ | ----- |
 | ordinal indicator suffix | [OrdinalIndicatorSuffix.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/main/scala/com/verbose/potato/OrdinalIndicatorSuffix.scala) | [OrdinalIndicatorSuffixSpec.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/test/scala/com/verbose/potato/OrdinalIndicatorSuffixSpec.scala) |
 | number of sundays | [NumberOfSundays.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/main/scala/com/verbose/potato/NumberOfSundays.scala) | [NumberOfSundaysSpec.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/test/scala/com/verbose/potato/NumberOfSundaysSpec.scala) |
-| obfuscation | [Obfuscation.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/main/scala/com/verbose/potato/Obfuscation.scala) | [Obfuscation.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/test/scala/com/verbose/potato/ObfuscationSpec.scala) |
+| obfuscation | [Obfuscation.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/main/scala/com/verbose/potato/Obfuscation.scala) | [ObfuscationSpec.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/test/scala/com/verbose/potato/ObfuscationSpec.scala) |
 
 # How?
 
