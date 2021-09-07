@@ -1,25 +1,17 @@
 package com.verbose.potato
 
-import eu.timepit.refined.types.numeric.PosInt
+import eu.timepit.refined.types.string.NonEmptyString
 
 import java.time.DayOfWeek._
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
-import scala.math.Ordering.Implicits.infixOrderingOps
+import scala.math.Ordering.Implicits._
 import scala.util.Try
 
-object VerbosePotato {
+object NumberOfSundays {
 
-  def ordinalIndicatorSuffix(n: PosInt): String =
-    n.value % 10 match {
-      case 1 => s"${n}st"
-      case 2 => s"${n}nd"
-      case 3 => s"${n}rd"
-      case _ => s"${n}th"
-    }
-
-  def numberOfSundaysBetween(dateFrom: String, dateTo: String): Either[String, Long] =
+  def numberOfSundaysBetween(dateFrom: NonEmptyString, dateTo: NonEmptyString): Either[String, Long] =
     (parseDate(dateFrom), parseDate(dateTo)) match {
       case (Some(d1), Some(d2)) if d1 > d2 => Left(s"dateFrom is after dateTo ($dateFrom < $dateTo)")
       case (Some(d1), Some(d2))            =>
@@ -28,6 +20,8 @@ object VerbosePotato {
       case _                               => Left("invalid format for one or both dates")
     }
 
-  def parseDate(d: String): Option[LocalDate] = Try(LocalDate.parse(d, DateTimeFormatter.ofPattern("dd-MM-yyyy"))).toOption
+  private def parseDate(d: NonEmptyString): Option[LocalDate] = Try(
+    LocalDate.parse(d.value, DateTimeFormatter.ofPattern("dd-MM-yyyy"))
+  ).toOption
 
 }
