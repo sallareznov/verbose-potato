@@ -6,6 +6,12 @@
 
 Playground project with small Scala exercises
 
+| Module | Source | Tests |
+| ------ | ------ | ----- |
+| ordinal indicator suffix | [OrdinalIndicatorSuffix.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/main/scala/com/verbose/potato/OrdinalIndicatorSuffix.scala) | [OrdinalIndicatorSuffixSpec.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/test/scala/com/verbose/potato/OrdinalIndicatorSuffixSpec.scala) |
+| number of sundays | [NumberOfSundays.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/main/scala/com/verbose/potato/NumberOfSundays.scala) | [NumberOfSundaysSpec.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/test/scala/com/verbose/potato/NumberOfSundaysSpec.scala) |
+| obfuscation | [Obfuscation.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/main/scala/com/verbose/potato/Obfuscation.scala) | [Obfuscation.scala](https://github.com/sallareznov/verbose-potato/blob/main/src/test/scala/com/verbose/potato/ObfuscationSpec.scala) |
+
 # How?
 
 ### Tests
@@ -38,4 +44,3 @@ Because the library has some limitations in Scala 3, especially when it comes to
 implicitly thanks to Scala 2 macros (See https://github.com/fthomas/refined/issues/932).
 I decided to stick to Scala 2 and `refined`, because of the type-safety it gives me, to filter out invalid inputs and
 not having to worry about them.
-
